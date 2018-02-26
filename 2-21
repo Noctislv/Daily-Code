@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+
+	int binary[6];
+	cout << "Insert a Binary number from left to right" << endl;
+	for (int c = 6; c>0; c--) {
+		cin >> binary[c];
+	}
+	binary[6] = binary[6] * 32;
+	binary[5] = binary[5] * 16;
+	binary[4] = binary[4] * 8;
+	binary[3] = binary[3] * 4;
+	binary[2] = binary[2] * 2;
+	binary[1] = binary[1] * 1;
+	cout << "Your decimal number is: " << binary[6] + binary[5] + binary[4] + binary[3] + binary[2] + binary[1] << endl;
+}
