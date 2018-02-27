@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+#include <string>
+#include <fstream>
+
+int main() {
+	string line;
+	ifstream myfile("prog01.in.txt");
+	if (myfile.is_open())
+	{
+		while (getline(myfile, line))
+		{
+			cout << line << endl;
+			cout << line << endl;
+		}
+		myfile.close();
+	}
+	else
+		cout << "cannot open" << endl;
+	system("pause");
+
+}
