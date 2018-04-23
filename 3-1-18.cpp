@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <fstream>
 #include <ctime>
 using namespace std;
@@ -8,7 +8,7 @@ int main() {
 	int temp;
 	int num[5];
 
-	ifstream read("number.txt");
+	ifstream read ("number.txt");
 	if (read.isfx.open())
 		if (read.isfx.open())
 		{
@@ -40,4 +40,4 @@ int main() {
 
 		}
 
-			}
+			}*/

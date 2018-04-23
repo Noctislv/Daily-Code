@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include <iostream>
@@ -124,4 +124,4 @@ void Balls::initBalls(int x, int y, int r) {
 void Balls::draw() {
 	al_draw_filled_circle(xCoordinate, yCoordinate, radius,
 		al_map_rgb(28, 28, 28));
-}
+}*/

@@ -1,28 +1,36 @@
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_primitives.h>
-#include<time.h>
+/*#include <iostream>
+#include <fstream>
+using namespace std;
 
-
-
-int SCREEN_H = 900;
-int SCREEN_W = 700;
 int main() {
-	srand(time(NULL));
-	ALLEGRO_DISPLAY *display = NULL;
-	ALLEGRO_BITMAP *bit = NULL;
-	al_init();
-	
-		display = al_create_display(rand() % SCREEN_H+100, rand() % SCREEN_W+200);
-		al_init_primitives_addon();
-		al_clear_to_color(al_map_rgb(rand() % 255, rand() % 255, rand() % 255));
-	while (1==1) {
-
-		
-
-		al_draw_circle(rand() % SCREEN_W, rand() % SCREEN_H, rand() % 200, al_map_rgb(rand() % 255, rand() % 255, rand() % 255), rand() % 200);
+	int myscore;
+	cout << "enter your score" << endl;
+	cin >> myscore;
+	int n;
+	int score[5];
 
 
-		al_flip_display();
-		al_rest(.01);
+	int score2[5];
+	int temp;
+
+	ifstream read("scores.txt");
+	if (read.isfx.open())
+	{
+		for (int i = 0; i < 5; i++) {
+			read >> n;
+			score[i] = n;
+		}
+	read.close();
+	for (int i = 0; i <= 5; i++)
+		if (score[1] < myscore) {
+			temp = score[i];
+			score2[i] = myscore;
+			myscore = temp;
+
+		}
+		else
+			score2[i] = score[i];
+
 	}
-}
+
+}*/

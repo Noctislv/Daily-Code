@@ -1,95 +1,82 @@
-#include<iostream>
-#include<ctime>
-using namespace std;
-
-//class definition
-class Pokemon {
-private:
-	int life;
-
-public:
-	void eat(char c);
-	void initpoke(int health);
-	void printInfo();
-	
-	
-};
-char foodDrop(char location);
-
-
-int main() {
-	srand(time(NULL));
-	char location = 'd'; //test with d and f
-	cout << foodDrop(location) << endl;;
-	system("pause");
-
-	Pokemon grima;
-	Pokemon naga;
-	grima.initpoke(5);
-	//grima.eat('b');//call fooddrop in the () once you get it!
-	grima.eat(foodDrop('d'));
-	grima.printInfo();
-
-	naga.initpoke(5);
-	//naga.eat('b');
-	naga.eat(foodDrop('d'));
-	naga.printInfo();
-}
-
-//function definitions
-void Pokemon::eat(char food) {
-	if (food == 'b')
-		life += 3;
-	//keep going here, 3 more if statements
-	if (food == 'f')
-		life += 10;
-	if (food == 'm')
-		life += 25;
-	if (food == 'c')
-		life += 50;
-
-
-}
-void Pokemon::initpoke(int health){
-	life = health;
-}
-
-void Pokemon::printInfo() {
-	cout << "your pokemon's health is " << life << endl;
-
-}
-char foodDrop(char location) {
-
-	int num = rand() % 100 + 1;
-
-	if (location == 'f') {
-		if (num <= 50) {
-			cout << "you got a berry!" << endl;
-			return 'b';
-		}
-		else {
-			cout << "you got a mushroom!" << endl;
-			return 'm';
-
-		}
-	}
-	else if (location == 'd') {
-		if (num <= 20) {
-			cout << "You got a berry!" << endl;
-			return 'b';
-		}
-		else if (num <= 40) {
-			cout << "You got a fruit!" << endl;
-			return 'f';
-		}
-		else if (num < 40) {
-			cout << "You found some cheese?" << endl;
-			return 'c';
-		}
-	}
-
-
-	else
-		cout << "invalid location" << endl;
-
-}
+//#include <iostream>
+//using namespace std;
+//#include<string>
+//
+//int knockback(int D, int w, int p, double s, int b, double r);
+//
+//class Smash {
+//private:
+//	int lives;
+//
+//	string name;
+//public:
+//	void InitSmash(int x, int y, string z);
+//	void PrintInfo();
+//	void TakeDamage(int num);
+//
+//protected:
+//	int percent;
+//};
+//
+//
+//class Robin : public Smash {
+//public:
+//	void Nosterafu(int dam);
+//
+//private:
+//
+//	int PercentCount;
+//};
+//
+//class Marth : public Smash {
+//public:
+//	void Counter(int dam);
+//
+//private:
+//	int PercentCount;
+//};
+//
+//int main() {
+//		Marth player;
+//	 player.InitSmash(4, 0, "Marth");
+//	 player.PrintInfo();
+//	 player.TakeDamage(knockback(30, 75, 20, 1.5, 20, 1.2));
+//	 player.PrintInfo();
+//
+//
+//	 Robin player2;
+//	 player2.InitSmash(4, 0, "Robin");
+//	 player2.PrintInfo();
+//	 player2.TakeDamage(knockback(30, 75, 20, 1.5, 20, 1.2));
+//	 player2.PrintInfo();
+//	 player2.Nosterafu(20);
+//	 player2.PrintInfo();
+//}
+//void Smash::InitSmash(int x, int y, string z) {
+//	percent = 0;
+//	lives = 2;
+//}
+//void Smash::PrintInfo() {
+//	cout << name;
+//	cout << "'s damage percentage is:" << percent << " and lives are " << lives << endl;
+//
+//}
+//void Smash::TakeDamage(int num) {
+//	percent += num;
+//}
+//int knockback(int D, int w, int p, double s, int b, double r) {
+//
+//	int num;
+//	num = ((((7 * (D + 2) * (D + p)) / (w + 100) + 9) * 2 * s) + b) * r;
+//	cout << "damage calculated is " << num << endl << endl;
+//	return num;
+//}
+//void Marth::Counter(int dam) {
+//
+//	cout << "You countered" << dam * 2 << "damage" << endl;
+//}
+//void Robin::Nosterafu(int dam) {
+//	percent+=dam;
+//
+//	cout << "You used Nosterafu and your health is now " << percent << endl;
+//}
